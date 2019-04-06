@@ -4,18 +4,25 @@ Library    Collections
 Library    String
 Variables    ./locators.yaml   
  
+*** Variables ***
+${Mac OS X}    Darwin
+${Windows}    win32
+${Linux}    linux
 
 *** Keywords ***
 Open Calculator
     [Arguments]    ${url}=https://www.baidu.com
     # Open Browser    ${url}    chrome
-    Create Webdriver    Chrome    executable_path=/usr/local/bin/chromedriver    
+    ${system}=    Evaluate    platform.system()    platform
+    Log To Console    \nI am running on ${system}
+    Run Keyword IF    '${system}==${Mac OS X}'     Create Webdriver    Chrome    executable_path=/usr/local/bin/chromedriver 
+    ...   ELSE    Create Webdriver    Chrome      
     Maximize Browser Window
     Go To    ${url}
     Input Text    ${search_text_locator}    计算器
     Click Button    ${search_button_locator}
     Wait Until Page Contains Element    ${calc_locator} 
-    Set Selenium Speed    0.5
+    # Set Selenium Speed    0.5
     
 Calculator has been cleared
     Push Button C
