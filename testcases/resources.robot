@@ -15,8 +15,7 @@ Open Calculator
     # Open Browser    ${url}    chrome
     ${system}=    Evaluate    platform.system()    platform
     Log To Console    \nI am running on ${system}
-    Run Keyword IF    '${system}==${Mac OS X}'     Create Webdriver    Chrome    executable_path=/usr/local/bin/chromedriver 
-    ...   ELSE    Create Webdriver    Chrome      
+    Create Webdriver    Chrome      
     Maximize Browser Window
     Go To    ${url}
     Input Text    ${search_text_locator}    计算器
