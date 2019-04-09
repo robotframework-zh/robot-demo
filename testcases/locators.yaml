@@ -4,10 +4,16 @@ search_button_locator: xpath=//*[@id="su"]
 
 # calc
 calc_locator: css=#\31 > div > div.op_calc_mini_calc
+button_0_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(5) > span:nth-child(1)
 button_1_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(4) > span:nth-child(1)
 button_2_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(4) > span:nth-child(2)
 button_3_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(4) > span:nth-child(3)
+button_4_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(3) > span:nth-child(1)
+button_5_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(3) > span:nth-child(2)
 button_6_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(3) > span:nth-child(3)
+button_7_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(2) > span:nth-child(1)
+button_8_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(2) > span:nth-child(2)
+button_9_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(2) > span:nth-child(3)
 button_add_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(5) > span.op_new_cal_span_last.op_new_cal_color_orange.op_new_cal_bg_pale
 button_equal_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(5) > span.op_new_cal_color_orange.OP_LOG_BTN
 button_sub_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(4) > span.op_new_cal_span_last.op_new_cal_color_orange.op_new_cal_bg_pale
@@ -15,3 +21,7 @@ button_multi_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction
 button_div_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(2) > span.op_new_cal_span_last.op_new_cal_color_orange.op_new_cal_bg_pale
 text_screen_result: css=#\31 > div > div > div > div > div.op_new_cal_screen > p.op_new_val_screen_result
 button_clear_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(1) > span.op_new_cal_span_last.op_new_cal_color_dark_gray.op_new_cal_bg_pale
+button_left_parenthesis_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(1) > span:nth-child(1)
+button_right_parenthesis_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(1) > span:nth-child(2)
+button_dot_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(5) > span:nth-child(2)
+button_mod_locator: css=#\31 > div > div > div > div > div.op_new_cal_fraction > div:nth-child(1) > span:nth-child(3)

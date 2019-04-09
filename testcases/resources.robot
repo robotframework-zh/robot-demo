@@ -56,12 +56,22 @@ Push Button ${button}
     Run keyword IF    '${button}'=='1'    Click Element    ${button_1_locator}    
     ...    ELSE IF    '${button}'=='2'    Click Element    ${button_2_locator}  
     ...    ELSE IF    '${button}'=='3'    Click Element    ${button_3_locator}
-    ...    ELSE IF    '${button}'=='6'    Click Element    ${button_6_locator}  
+    ...    ELSE IF    '${button}'=='4'    Click Element    ${button_4_locator}
+    ...    ELSE IF    '${button}'=='5'    Click Element    ${button_5_locator}  
+    ...    ELSE IF    '${button}'=='6'    Click Element    ${button_6_locator}
+    ...    ELSE IF    '${button}'=='7'    Click Element    ${button_7_locator}
+    ...    ELSE IF    '${button}'=='8'    Click Element    ${button_8_locator}  
+    ...    ELSE IF    '${button}'=='9'    Click Element    ${button_9_locator}
+    ...    ELSE IF    '${button}'=='0'    Click Element    ${button_0_locator}   
     ...    ELSE IF    '${button}'=='+'    Click Element    ${button_add_locator}
     ...    ELSE IF    '${button}'=='='    Click Element    ${button_equal_locator} 
     ...    ELSE IF    '${button}'=='-'    Click Element    ${button_sub_locator}
     ...    ELSE IF    '${button}'=='/'    Click Element    ${button_div_locator}
     ...    ELSE IF    '${button}'=='*'    Click Element    ${button_multi_locator}
+    ...    ELSE IF    '${button}'=='('    Click Element    ${button_left_parenthesis_locator}
+    ...    ELSE IF    '${button}'==')'    Click Element    ${button_right_parenthesis_locator}
+    ...    ELSE IF    '${button}'=='%'    Click Element    ${button_mod_locator}
+    ...    ELSE IF    '${button}'=='.'    Click Element    ${button_dot_locator}
     ...    ELSE    Log    none
     
 Result should be ${expected}
