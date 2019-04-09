@@ -15,9 +15,9 @@ Open Calculator
     # Open Browser    ${url}    chrome
     ${system}=    Evaluate    platform.system()    platform
     Log To Console    \nI am running on ${system}
-    # Run Keyword IF    '${system}==${Mac OS X}'     Create Webdriver    Chrome    executable_path=/usr/local/bin/chromedriver 
-    # ...   ELSE    Create Webdriver    Chrome      
-    Create Webdriver    Chrome
+    Run Keyword IF    '${system}'=='${Mac OS X}'     Create Webdriver    Chrome    executable_path=/usr/local/bin/chromedriver 
+    ...   ELSE    Create Webdriver    Chrome      
+    # Create Webdriver    Chrome
     Maximize Browser Window
     Go To    ${url}
     Input Text    ${search_text_locator}    计算器
@@ -34,9 +34,16 @@ Close Calculator
 User Type "${expression}"
     @{char}    Split String    ${expression}    ${SPACE}
     :FOR    ${i}    IN    @{char}
-    \    Push Button ${i}
+    \    Push Buttons ${i}
     Push Button =
     
+Push Buttons ${numbers}
+    ${numbers_string}=    Convert To String    ${numbers} 
+    @{characters}=    Split String To Characters    ${numbers_string}
+    :FOR    ${c}    IN    @{characters}
+    \    Push Button ${c}
+       
+  
 Add ${number1} and ${number2}
     # Log Many    ${number1}    ${number2}
     Push Button ${number1}
